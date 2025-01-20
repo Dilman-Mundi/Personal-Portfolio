@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!--CSS styles for stylesheets and fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+        <link rel = "stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/3254cb92e8.js" crossorigin="anonymous"></script>
+        <script src="script.js" defer></script>
+
+    </head>
+    <body>
+
+        <nav>
+            <div class="logo"><a href="index.html">Home</a></div>
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class = "links">
+                <ul>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="comp.html">Competitive Programming</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a class = "lastItem" onclick="scrollToFooter()">Contact</a></li>
+                    <script src="animations.js"></script>
+                </ul>
+            </div>
+        </nav>
+
+        <section class = "sec" id = "comp">
+            <br><br><br><br>
+            <h2>Competitive Programming</h2>
+            <p>This is where I explore and master data structures, algorithms, and their applications to solve complex problems. I'm committed to improving my coding skills and continually growing as a programmer.</p>
+            <br><br><br>
+            <h3>Online Judge Profiles</h3>
+            <br>
+            <p>I use online judges to practice programming problems. Here are my profiles for the online judges that I use.</p>
+            <h3>Dmoj: <a target = "_blank" href="https://dmoj.ca/user/DilmanM">DilmanM</a></h3>
+            <h3>Leetcode: <a target = "_blank" href="https://leetcode.com/u/DilmanM/">DilmanM</a></h3>
+        </section>
+
+        <br>
+        <footer class="footer_items" id="footer">
+            <br>
+            <div class = "footer_links">
+                <ul><i class="fa-brands fa-github"></i> <a target="_blank" href="https://github.com/Dilman-Mundi">Github</a></ul>
+                <ul><i class="fa-brands fa-linkedin"></i> <a target="_blank" href="https://linkedin.com/in/dilman-mundi-382436330">Linkedin</a></ul>
+                <ul><i class="fa-solid fa-envelope"></i> <a href="mailto:DilmanMundi04@gmail.com">Email</a></ul>
+            </div>
+        </footer>
+
+
+        <div>
+            <script>
+                {
+                    const nav = document.querySelector("nav");
+                    let lastScrollY = window.scrollY;
+
+                    window.addEventListener("scroll", () => {
+                        if (lastScrollY < window.scrollY){
+                            nav.classList.add("nav--hidden");
+                        } else {
+                            nav.classList.remove("nav--hidden");
+                        }
+
+                        lastScrollY = window.scrollY;
+                        
+                    });
+                }
+            </script>
+        </div>
+    </body>
+</html>

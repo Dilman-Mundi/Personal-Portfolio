@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!--CSS styles for stylesheets and fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+        <link rel = "stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/3254cb92e8.js" crossorigin="anonymous"></script>
+        <script src="script.js" defer></script>
+
+    </head>
+    <body>
+        <div class = "container">
+            <div id="background"></div>
+            <br><br><br><br><br><br><br><br><br><br><br>
+            <h2>Hi there,</h2>
+            <div class="typewriter"> 
+                <h1>I'm Dilman</h1>
+            </div>
+            <hr>
+            <button onclick = "scrollToAbout()">Learn more</button>
+            <script src="animations.js"></script>
+        </div>
+        <nav>
+            <div class="logo"><a href="index.html">Home</a></div>
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class = "links">
+                <ul>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="comp.html">Competitive Programming</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a class = "lastItem" onclick="scrollToFooter()">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <br><br>
+        <section class = "sec" id = "aboutMe">
+            <h2>About Me</h2>
+            <br>
+            <p>Welcome to my portfolio! Here, you'll find a collection of my projects, coding challenges, and experiences that reflect my journey in computer science.<br><br>I'm currently a Computer Science student at Carleton University, where I'm diving into the foundations of algorithms, data structures, and software development. Competitive programming has been a major focus for me—I've honed my problem-solving skills by tackling challenges on platforms like DMOJ and Leetcode, exploring efficient ways to apply concepts like recursion, dynamic programming, and graph theory.<br><br>Beyond coding, I'm passionate about collaboration and mentorship. Whether it's tutoring peers on tricky concepts, volunteering in my community, or teaching chess strategies to young learners, I thrive on opportunities to share knowledge and grow alongside others.<br><br>Feel free to explore the projects and competitive programming section of this site to see the work I've done and the problems I've solved. If you're here as a co-op employer or collaborator, I'd love to connect and discuss how I can bring my skills, creativity, and enthusiasm to your team.</p>
+            <br>
+        </section>
+        <br><br>
+        
+        <footer class="footer_items" id="footer">
+            <br>
+            <div class = "footer_links">
+                <ul><i class="fa-brands fa-github"></i> <a target="_blank" href="https://github.com/Dilman-Mundi">Github</a></ul>
+                <ul><i class="fa-brands fa-linkedin"></i> <a target="_blank" href="https://linkedin.com/in/dilman-mundi-382436330">Linkedin</a></ul>
+                <ul><i class="fa-solid fa-envelope"></i> <a href="mailto:DilmanMundi04@gmail.com">Email</a></ul>
+            </div>
+        </footer>
+
+        <div>
+            <script>
+                {
+                    const nav = document.querySelector("nav");
+                    let lastScrollY = window.scrollY;
+
+                    window.addEventListener("scroll", () => {
+                        if (lastScrollY < window.scrollY){
+                            nav.classList.add("nav--hidden");
+                        } else {
+                            nav.classList.remove("nav--hidden");
+                        }
+
+                        lastScrollY = window.scrollY;
+                        
+                    });
+                }
+            </script>
+        </div>
+    </body>
+</html>
